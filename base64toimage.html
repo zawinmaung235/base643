@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	   <title>Base64 code To Image</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+	
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Camera Hacking</h2>
+
+<div class="card">
+	
+	  <input type="text" id="base64Input" placeholder="Enter Base64 Code..">
+    <br>
+    <img id="outputImage" src="https://media.tenor.com/Zp9f2I9FpFcAAAAM/anonimous-hacker.gif" alt="Decoded Image" style="width:100%">
+    	
+  <h1>Zaw Win Maung</h1>
+  <p class="title">Software Service & EthicalHacking</p>
+  <p>Version-1.0</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button onclick="decodeBase64()">Decode
+</button></p>
+</div>
+    <script>
+        function decodeBase64() {
+            const base64String = document.getElementById('base64Input').value;
+            const img = document.getElementById('outputImage');
+            img.src = 'data:image/png;base64,' + base64String;
+        }
+    </script>
+</body>
+</html>
